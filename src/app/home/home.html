@@ -1,0 +1,155 @@
+<section class="hero">
+<div class="container">
+<div class="row align-items-center">
+
+    <div class="col-lg-6">
+    <p class="hero-label">PREMIUM CAR STORE</p>
+
+    <h1>
+        Find the perfect car
+        <span>for your journey.</span>
+    </h1>
+
+    <p class="hero-description">
+        Explore our collection of modern cars and find the right one
+        at the right price.
+    </p>
+
+    <a class="btn btn-danger btn-lg" routerLink="/cars">
+        Browse Cars
+    </a>
+    </div>
+
+    <div class="col-lg-6">
+    <img
+        src="images/8688532.jpg" alt="Bmw" class="img-fluid hero-car">
+    </div>
+
+</div>
+</div>
+</section>
+
+
+<section class="featured-cars">
+    <div class="container">
+
+        <div class="section-heading">
+        <div>
+            <p>FEATURED CARS</p>
+            <h2>Our top picks for you.</h2>
+        </div>
+
+        
+        </div>
+
+        <div class="row g-4">
+
+        @for (car of featuredCars; track car.name) {
+            <div class="col-md-6 col-lg-3">
+                <app-product-card [car]="car"></app-product-card>
+            </div>
+        }
+        </div>
+        <div class="btn-view">
+        <a class="btn btn-outline-danger" routerLink="/cars">
+            View All Cars
+        </a>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="features">
+<div class="container">
+
+    <div class="section-heading text-center">
+    <p>WHY CHOOSE US</p>
+    <h2>A better way to find your next car.</h2>
+    </div>
+
+    <div class="row g-4">
+
+    <div class="col-md-4">
+        <div class="feature-card">
+        <span class="feature-icon">✓</span>
+        <h3>Quality Cars</h3>
+        <p>
+            Explore a carefully selected collection of modern and reliable cars.
+        </p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="feature-card">
+        <span class="feature-icon">$</span>
+        <h3>Best Prices</h3>
+        <p>
+            Find competitive prices and choose the car that fits your budget.
+        </p>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="feature-card">
+        <span class="feature-icon">★</span>
+        <h3>Easy Shopping</h3>
+        <p>
+            Browse, save your favorites and add your preferred cars to the cart.
+        </p>
+        </div>
+    </div>
+
+    </div>
+
+</div>
+</section>
+
+<section class="about-store">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+            <p class="about-label">ABOUT CARSTORE</p>
+
+            <h2>
+            A simple way to find
+            <span>your next car.</span>
+            </h2>
+
+            <p class="about-description">
+            CarStore makes it easier to explore modern cars,
+            compare your options and find the right car for your needs.
+            </p>
+
+            <div class="about-stats">
+            <div>
+                <strong>15+</strong>
+                <span>Cars Available</span>
+            </div>
+
+            <div>
+                <strong>3</strong>
+                <span>Shopping Features</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Easy Browsing</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="about-box">
+                <img src="images/logo.png" alt="CarStore Logo" class="brand-logo" >
+            <p>
+                Quality cars, clear information and an easy
+                shopping experience in one place.
+            </p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+<div class="container">
+
+    <!-- Brand -->
+    <a class="navbar-brand brand" routerLink="/" (click)="closeMenu()">
+        <img  src="images/logo.png" alt="CarStore Logo" class="brand-logo">
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="navbar-toggler" type="button" (click)="toggleMenu()" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" [class.show]="isMenuOpen">
+
+    <!-- Main Navigation -->
+    <ul class="navbar-nav main-links mx-auto">
+
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/" (click)="closeMenu()">
+            Home
+        </a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" routerLink="/cars" (click)="closeMenu()">
+            Cars
+        </a>
+        </li>
+
+    </ul>
+    
+    <!-- Actions -->
+    <div class="navbar-actions">
+
+        <a class="action-link favorites-link" routerLink="/favorites" (click)="closeMenu()">
+        <span class="action-icon">♡</span>
+        Favorites
+        </a>
+
+        <a class="action-link cart-link" routerLink="/cart" (click)="closeMenu()">
+        <span class="action-icon">🛒</span>
+        Cart
+        </a>
+
+        @if (!currentUser) {
+
+    <a
+        class="action-link"
+        routerLink="/login"
+        (click)="closeMenu()"
+    >
+        Login
+    </a>
+
+    <a
+        class="action-link"
+        routerLink="/register"
+        (click)="closeMenu()"
+    >
+        Register
+    </a>
+
+} @else {
+
+    <span class="action-link user-name">
+        {{ currentUser.name }}
+    </span>
+    <button
+        type="button"
+        class="action-link logout-btn"
+        (click)="logout(); closeMenu()"
+    >
+        Logout
+    </button>
+}
+
+    </div>
+
+    </div>
+
+</div>
+</nav>

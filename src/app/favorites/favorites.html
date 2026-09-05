@@ -1,0 +1,46 @@
+<section class="favorites-page">
+    <div class="container">
+
+        <div class="favorites-header">
+        <p>YOUR FAVORITES</p>
+        <h2>Saved Cars</h2>
+        </div>
+
+        @if (favorites.length > 0) {
+
+        <div class="favorites-grid">
+
+            @for (car of favorites; track car.name) {
+
+            <div class="favorite-card">
+
+                <img [src]="car.image" [alt]="car.name">
+
+                <h3>{{ car.name }}</h3>
+
+                <p class="price">
+                ${{ car.price | number}}
+                </p>
+
+                <p class="info">
+                {{ car.info }}
+                </p>
+                <button class="remove-btn" (click)="removeFavorite(car)">Remove</button>
+            </div>
+            }
+
+        </div>
+
+        } @else {
+
+        <div class="empty-favorites">
+            <h3>No favorite cars yet.</h3>
+            <p>
+            Go to Cars and add some cars to your favorites.
+            </p>
+        </div>
+
+        }
+
+    </div>
+</section>

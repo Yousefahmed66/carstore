@@ -1,0 +1,24 @@
+<div class="card">
+
+<div class="fav" [class.active]="isFavorite" (click)="toggleFavorite()">    <span>
+        {{ isFavorite ? '♥' : '♡' }}
+    </span>
+</div>
+
+<img [src]="car.image" [alt]="car.name">
+
+<h3>{{ car.name }}</h3>
+
+<p class="price">
+    ${{ car.price | number }}
+</p>
+
+<p class="info">
+    {{ car.info }}
+</p>
+
+<button class="add"class="add" (click)="addToCart()">
+    Add to Cart
+</button>
+
+</div>
