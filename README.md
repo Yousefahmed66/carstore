@@ -1,6 +1,8 @@
 # CarStore
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.3.
+# open project in web using this link
+https://Yousefahmed66.github.io/carstore/
 
 ## Development server
 
