@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yousefahmed66.github.io/carstore/sitemap.xml
